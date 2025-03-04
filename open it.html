@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Love Letter</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://www.transparenttextures.com/patterns/sakura.png'); /* Flower background */
+            font-family: 'Quicksand', sans-serif;
+        }
+        .letter {
+            width: 400px;
+            height: auto;
+            background-color: #d4eac7;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #5a9367;
+        }
+        .grid-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(90, 147, 103, 0.2) 1px, transparent 1px), 
+                              linear-gradient(to right, rgba(90, 147, 103, 0.2) 1px, transparent 1px);
+            background-size: 25px 25px;
+            pointer-events: none;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2e5930;
+            margin-bottom: 10px;
+        }
+        .message {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #2e5930;
+            line-height: 1.6;
+        }
+        .hidden-message {
+            display: none;
+            margin-top: 15px;
+            font-size: 16px;
+            color: #2e5930;
+            font-weight: bold;
+            background-color: #bfe3b4;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .flower-icon {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            margin-top: 15px;
+        }
+        .flower-icon:hover {
+            transform: scale(1.2);
+        }
+    </style>
+    <script>
+        function showMessage() {
+            document.getElementById("hiddenMessage").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <div class="letter">
+        <div class="grid-pattern"></div>
+        <p class="title">To You...</p>
+        <p class="message">I don't know where my life would be without you. You make me feel so amazing, so wanted. I love you more than anything in this world, and I don't want to lose you. You are my world, and I love you.</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/826/826963.png" alt="Cute Flower" class="flower-icon" onclick="showMessage()">
+        <p id="hiddenMessage" class="hidden-message">🌸 You're as beautiful as a blooming flower and as warm as a sunny day! 💚</p>
+    </div>
+</body>
+</html>
